@@ -1,0 +1,84 @@
+.timer__inner {
+    padding-top: 100px;
+}
+
+.timer__time {
+    font-size: 60px;
+    font-weight: 100;
+    text-align: center;
+}
+
+.timer__units {
+    width: 74px;
+    display: inline-block;
+    text-align: center;
+}
+
+.sub {
+    font-size: 26px;
+    display: none;
+}
+
+.timer__buttons {
+    text-align: center;
+}
+
+.timer__buttons .button {
+    font-size: 14px !important;
+}
+
+.hidden-xs {
+    display:none;
+}
+
+
+
+@media (min-width: 400px) {
+    .hidden-xs {
+        display: unset;
+    }
+    .visible-xs {
+        display: none;
+    }
+}
+
+@media (min-width: 360px) {
+    .timer__time {
+        font-size: 60px;
+    }
+    .sub {
+        display: inline;
+        font-weight: 200;
+    }
+
+    .timer__buttons .button {
+        font-size: 11px !important;
+        min-width: 102px;
+    }
+
+    .timer__units {
+        width: 90px;
+    }
+}
+
+@media(min-width: 460px) {
+    .timer__time {
+        font-size: 80px;
+    }
+
+    .timer__units {
+        min-width: 100px;
+    }
+}
+
+
+.disabled, .disabled:hover, .disabled:active{
+    border-color: #d8d7d7;
+    color: #969393;
+}
+
+.disabled.button-primary, .disabled.button-primary:hover, .disabled.button-primary:active {
+    border-color:#9cd2e2 !important;
+    background-color: #9cd2e2 !important;
+    color: #fff;
+}

@@ -1,0 +1,32 @@
+<div class="timer__inner">
+  <div class="timer__time">
+    <span class="timer__hours timer__units">{{hours}}<span class="sub">h</span>
+    </span>
+    <span class="timer__minutes timer__units">{{minutes}}<span class="sub">m</span>
+    </span>
+    <span class="timer__seconds timer__units">{{seconds}}<span class="sub">s</span>
+    </span>
+  </div>
+  <div class="timer__buttons">
+    <button class="button timer__button timer__start" (click)="run()">
+      <i class="fas visible-xs" [ngClass]="{
+        'fa-play': !running,
+        'fa-stop': running
+      }"></i>
+      <span class="text hidden-xs">{{running ? "Stop" : "Start"}}</span>
+    </button>
+    <button class="button timer__button timer__reset" (click)="reset()" 
+    [disabled]="running || time === 0" 
+    [class.disabled]="running || time === 0">
+      <i class="fas fa-redo-alt visible-xs"></i>
+      <span class="text hidden-xs">Reset</span>
+    </button>
+    <button class="button button-primary timer__button timer__complete" (click)="complete()" 
+    [disabled]="running || time === 0" 
+    [class.disabled]="running || time === 0">
+      <i class="fas fa-check visible-xs">
+      </i>
+      <span class="text hidden-xs">Complete</span>
+    </button>
+  </div>
+</div>

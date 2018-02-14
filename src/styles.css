@@ -1,0 +1,20 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import 'normalize.css';
+@import 'skeleton.css';
+/* @import "../bower_components/animate.css"; */
+@import "../bower_components/fontawesome/web-fonts-with-css/css/fontawesome-all.css";
+
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+.visible {
+    display: block !important;
+}   
+
+body {
+    min-width: 300px;
+}

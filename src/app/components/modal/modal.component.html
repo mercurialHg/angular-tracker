@@ -1,0 +1,11 @@
+<div class="modal" [class.visible]="isOpen">
+  <!-- bind to @input  -->
+  <div class="modal__box">
+    <p class="modal__description"> Task name here</p>
+    <input type="text" class="modal__name" id="modalInput" name="modal_input" 
+    placeholder="Insert new name" [value]="name" #Name>
+    <!-- bind to @Input() to receive name to edit -->
+    <button class="modal__button button-primary" (click)="sendEdittedTask(Name.value)"> Add </button>
+    <!-- (click)="emit event to app-root" -->
+  </div>
+</div>

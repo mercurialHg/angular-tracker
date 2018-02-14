@@ -1,0 +1,22 @@
+<div class="app__inner container">
+  <app-modal [open]="modalOpened" [edit]="currentTask.name" (sendName)="receivedName($event)"></app-modal>
+  <app-timer (receive-time)="receivedTime($event)"></app-timer>
+
+  <div class="tasks">
+    <table class="tasks__inner">
+        <tr *ngFor="let task of tasks; let i = index">
+          <td>{{i+1}}</td>
+          <td> {{task.time}}</td>
+          <td>{{task.name}}</td>
+        </tr>
+    </table>
+  </div>
+</div>
+
+<!-- add responsive tables -->
+<!-- figure out what to do on mobile view -->
+<!-- 
+  index cell:hide
+  time cell: width 100%
+  scroll to left for other info
+ -->
